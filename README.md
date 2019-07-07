@@ -6,7 +6,7 @@ Yang Zhou [zhy@kth.se](mailto:zhy@kth.se)
 
 [Link to this project on Github](https://github.com/ZephyrL/DH2323Project)
 
-![2019-07-02 10_39_05](shots/2019-07-02 10_39_05.bmp)
+![2019-07-02 10_39_05](shots/2019-07-02_10_39_05.bmp)
 
 I would also recommend you to use *Typora*, a markdown file reader to view README.md in this folder, for better reading experience.
 
@@ -282,27 +282,27 @@ The completion of this project takes some time, I make a recording screen-shot a
 
 1. After I complete the basic camera settings, the screen and the ray marching renderer, I create a plane and a sphere to test if the camera and the ray marching algorithm works fine.
 
-![2019-06-25 02:14:09](shots/2019-06-25 02_14_09.bmp)
+![2019-06-25 02:14:09](shots/2019-06-25_02_14_09.bmp)
 
 2. After finishing the mesh importing and the distance field generation function, I use the generated distance function into the renderer, and it seems that the voxels are correctly detected.
 
-![2019-06-28 16:53:33](shots/2019-06-28 16_53_33.bmp)
+![2019-06-28 16:53:33](shots/2019-06-28_16_53_33.bmp)
 
 3. Instead of returning the value at the center of the voxel, now the distance function applies tri-linear interpolation, and the soft shadow part is added. Noted that the resolution of SDF is low at present, so the ears of bunny are flawed.
 
-![2019-06-28 20:41:48](shots/2019-06-28 20_41_48.bmp)
+![2019-06-28 20:41:48](shots/2019-06-28_20_41_48.bmp)
 
 4. It takes some time to generate a more accurate distance field, now the bunny looks better; also at this time, to avoid regenerating the distance field every run, I give names to meshes, and add functions to import and export distance fields with files.
 
-![2019-06-29 09_20_22](shots/2019-06-29 09_20_22.bmp)
+![2019-06-29 09_20_22](shots/2019-06-29_09_20_22.bmp)
 
 5. Then I referred to the distance functions of geometries, put them together with the bunny.
 
-![2019-06-29 11:10:34](shots/2019-06-29 11_10_34.bmp)
+![2019-06-29 11:10:34](shots/2019-06-29_11_10_34.bmp)
 
 6. Now it's time to give them colors, same time I add the ambient occlusion part into shading function.
 
-![2019-07-02 10_39_05](shots/2019-07-02 10_39_05.bmp)
+![2019-07-02 10_39_05](shots/2019-07-02_10_39_05.bmp)
 
 To help you identify the AO effect much clearer, I make a comparison here:
 
@@ -322,7 +322,7 @@ I have to admit that this project can be further improved, I've met some problem
 
 The current implementation is slow on SDF generation, which is the very first task I would work with. It also have some problem with visual effects (sometimes), that the bounding box of the bunny may influence the ambient occlusion calculation, as you may see in the following picture, there's a light square beneath the bunny, this happens when you adjust the step size of ambient occlusion, and I believe the core of this problem is the discontinuity of the global distance field, at the border of the bunny's mesh box. I'll look into this and alleviate the artefect.
 
-![2019-06-29 14:36:14](shots/2019-06-29 14_36_14.bmp)
+![2019-06-29 14:36:14](shots/2019-06-29_14_36_14.bmp)
 
 
 
